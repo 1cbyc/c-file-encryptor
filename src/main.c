@@ -20,6 +20,5 @@ int main(int argc, char *argv[]) {
 
     if (strcmp(mode, "encrypt") == 0) {
         encrypt_file(input_file, output_file, key);
-        
-    }
+    } else if 
 }
