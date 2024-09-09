@@ -14,7 +14,7 @@ i am just testing a theory on mac, might even delete this. cause i have not actu
 ```bash
 ./c-file-encryptor decrypt tests/encrypted_output.txt tests/decrypted_output.txt secretkey
 ```
-5. oh, i forgot to make clear that i put the test file here: `tests/test_input.txt`:
+5. oh, i forgot to make clear that i put the test file in `tests/test_input.txt` file, but then this is what i used in the text input:
 ```markdown
 oya now, this is my test file. make we see if the encryption and decryption dey work well.
 ```
