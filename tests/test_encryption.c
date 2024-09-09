@@ -42,7 +42,7 @@ void test_encryption_decryption() {
     fclose(out_fp);
 
     assert(match && "Decryption did not match the original input!");
-    printf("Test passed: Encryption and decryption work correctly!\n");
+    printf("Test passed: Encryption and decryption worked well bro!\n");
 }
 
 int main() {
