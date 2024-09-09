@@ -29,6 +29,15 @@ int main(int argc, char *argv[]) {
     // char *output_file = argv[3];
     // char *key = argv[4];
 
+        if (strcmp(action, "encrypt") == 0) {
+        encrypt_file(input_file, output_file, key);
+    } else if (strcmp(action, "decrypt") == 0) {
+        decrypt_file(input_file, output_file, key);
+    } else {
+        print_usage();
+        return EXIT_FAILURE;
+    }
+
     if (strcmp(mode, "encrypt") == 0) {
         encrypt_file(input_file, output_file, key);
     } else if (strcmp(mode, "decrypt") == 0) {
