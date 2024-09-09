@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "encryption.h"
@@ -27,5 +27,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    printf("%s operation completed haha!")
+    printf("%s operation completed haha!\n", mode);
+    return 0;
 }
