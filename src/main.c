@@ -12,4 +12,6 @@ int main(int argc, char *argv[]) {
         print_usage();
         return 1;
     }
+
+    char *mode = argv[1]
 }
