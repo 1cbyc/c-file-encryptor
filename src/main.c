@@ -27,5 +27,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    printf("%s operation completed haha!\n")
+    printf("%s operation completed haha!\n", mode);
+    return 0;
 }
