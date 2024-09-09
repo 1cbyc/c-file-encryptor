@@ -9,6 +9,7 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
     FILE *out_file = fopen(output, "wb");
 
     if (!in_file || !out_file) {
-        printf("Cant open files o.\n")
+        printf("Cant open files o.\n");
+        exit(1);
     }
 }
