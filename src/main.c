@@ -9,6 +9,7 @@ void print_usage() {
 
 int main(int argc, char *argv[]) {
     if (argc != 5) {
-        print_usage
+        print_usage();
+        return 1;
     }
 }
