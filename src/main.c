@@ -23,6 +23,7 @@ int main(int argc, char *argv[]) {
     } else if (strcmp(mode, "decrypt") == 0) {
         decrypt_file(input_file, output_file, key);
     } else {
-        print_usage()
+        print_usage();
+        return 1;
     }
 }
