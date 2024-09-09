@@ -6,3 +6,7 @@
 void print_usage() {
     printf("Usage: ./c-file-encryptor <encrypt|decrypt> <input_file> <output_file> <key>\n");
 }
+
+int main(int argc, char *argv[]) {
+    
+}
