@@ -6,5 +6,5 @@
 
 void xor_encrypt_decrypt(const char *input, const char *output, const char *key) {
     FILE *in_file = fopen(input, "rb");
-    FILE *out
+    FILE *out_file = fopen(output, "wb")
 }
