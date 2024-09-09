@@ -11,7 +11,7 @@ void test_encryption_decryption() {
 
     FILE *fp = fopen(test_input, "w");
     assert(fp != NULL);
-    fprintf(fp, "This is a test.");
+    fprintf(fp, "this is the test.");
     fclose(fp);
 
     encrypt_file(test_input, encrypted_output, key);
