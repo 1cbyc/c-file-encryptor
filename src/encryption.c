@@ -29,5 +29,5 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
 void encrypt_file(const char *input_file, const char *output_file, const char *key) {
     xor_encrypt_decrypt(input_file, output_file, key);
 
-void decrypt
+void decrypt_file(const char *input_file)
 }
