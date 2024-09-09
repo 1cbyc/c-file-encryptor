@@ -18,5 +18,7 @@ int main(int argc, char *argv[]) {
     char *output_file = argv[3];
     char *key = argv[4];
 
-    if (strcmp(mode, "encrypt") ==)
+    if (strcmp(mode, "encrypt") == 0) {
+        encrypt_file
+    }
 }
