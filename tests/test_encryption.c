@@ -9,7 +9,6 @@ void test_encryption_decryption() {
     const char *decrypted_output = "decrypted_output.txt";
     const char *key = "secret";
 
-    // Write some sample data to the test input file
     FILE *fp = fopen(test_input, "w");
     assert(fp != NULL);
     fprintf(fp, "This is a test.");
