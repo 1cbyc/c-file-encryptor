@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     const char *output_file = argv[3];
     const char *key = "secret";  // secret will be the default key
 
-        if (argc == 4) {
+    if (argc == 4) {
         key = argv[4];
     }
 
