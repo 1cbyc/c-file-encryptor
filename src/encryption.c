@@ -6,7 +6,7 @@ void encrypt_file(const char *input_file, const char *output_file, const char *k
     FILE *in_file = fopen(input_file, "rb");
     FILE *out_file = fopen(output_file, "wb");
     if (!in_file || !out_file) {
-        perror("File opening failed");
+        perror("file no gree open sha");
         return;
     }
 
