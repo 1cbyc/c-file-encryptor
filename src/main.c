@@ -19,6 +19,11 @@ int main(int argc, char *argv[]) {
         // return 1;
     }
 
+    const char *action = argv[1];
+    const char *input_file = argv[2];
+    const char *output_file = argv[3];
+    const char *key = "secret";  // 
+
     char *mode = argv[1];
     char *input_file = argv[2];
     char *output_file = argv[3];
