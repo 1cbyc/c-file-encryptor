@@ -49,4 +49,5 @@ int main(int argc, char *argv[]) {
 
     printf("%s operation completed haha!\n", mode);
     return 0;
+    return EXIT
 }
