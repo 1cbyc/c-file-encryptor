@@ -52,5 +52,5 @@ Mkfile.old
 dkms.conf
 
 # random
-auto.c
-auto_commit
+hide.c
+hide
