@@ -10,7 +10,7 @@ int main() {
 
         system("git push");
 
-        sleep(8);
+        sleep(12);
     }
 
     return 0;
