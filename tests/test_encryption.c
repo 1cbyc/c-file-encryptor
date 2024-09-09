@@ -3,4 +3,6 @@
 #include <assert.h>
 #include "encryption.h"
 
-void test_
+void test_encryption_decryption() {
+    
+}
