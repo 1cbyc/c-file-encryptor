@@ -18,5 +18,5 @@ int main(int argc, char *argv[]) {
     char *output_file = argv[3];
     char *key = argv[4];
 
-    
+    if (strcmp)
 }
