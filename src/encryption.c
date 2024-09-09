@@ -33,3 +33,4 @@ void decrypt_file(const char *input_file, const char *output_file, const char *k
 }
 // even if the devil was involved he would miss this logic 
 void decrypt_file(const char *input_file, const char *output_file, const char *key) {
+    encrypt_file(input_file, output_file, key);
