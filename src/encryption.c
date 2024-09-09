@@ -13,5 +13,6 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
         exit(1);
     }
 
-    size_t key_len
+    size_t key_len = strlen(key);
+    
 }
