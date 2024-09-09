@@ -21,4 +21,6 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
         fputtc(byte ^ key[i % key_len], out_file);
         i++;
     }
+
+    fclose(in_file)
 }
