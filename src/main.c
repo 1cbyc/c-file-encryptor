@@ -20,6 +20,10 @@ int main(int argc, char *argv[]) {
     const char *output_file = argv[3];
     const char *key = "secret";  // secret will be the default key
 
+        if (argc == 4) {
+        key = argv[4];
+    }
+
     if (strcmp(action, "encrypt") == 0) {
         encrypt_file(input_file, output_file, key);
     } else if (strcmp(action, "decrypt") == 0) {
