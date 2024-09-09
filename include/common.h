@@ -3,5 +3,6 @@
 
 #define BUFFER_SIZE 1024
 
+// considering adding other common functions here after i am done
 
-#endif // COMMON_H
+#endif
