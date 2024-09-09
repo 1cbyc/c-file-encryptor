@@ -5,3 +5,4 @@ i am just testing a theory on mac, might even delete this. cause i have not actu
 
 ## let me explain how you can use it sef
 1. just run `make` to build the file (i have done all the work for you)
+2. if you get issues, just use 
