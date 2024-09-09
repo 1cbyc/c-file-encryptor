@@ -41,7 +41,7 @@ void test_encryption_decryption() {
     fclose(in_fp);
     fclose(out_fp);
 
-    assert(match && "Decryption did not match the original input!");
+    assert(match && "Decryption did not match the original input o!");
     printf("Test passed: Encryption and decryption worked well bro!\n");
 }
 
