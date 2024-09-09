@@ -1,21 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "encryption.h"
 
-void encrypt_file(const char *input_file, const char *output_file, const char *key) {
-    FILE *in_file = fopen(input_file, "rb");
-    FILE *out_file = fopen(output_file, "wb");
+void xor_encrypt_decrypt(const char *input, const char *output, const char *key) {
+    FILE *in_file = fopen(input, "rb");
+    FILE *out_file = fopen(output, "wb");
+
     if (!in_file || !out_file) {
-        perror("File opening failed");
-        return;
+        printf("Cant open files o.\n");
+        exit(1);
     }
 
     size_t key_len = strlen(key);
+    size_t i= 0;
     int byte;
-    size_t i = 0;
 
     while ((byte = fgetc(in_file)) != EOF) {
-        fputc(byte ^ key[i % key_len], out_file);
+        fputtc(byte ^ key[i % key_len], out_file);
         i++;
     }
 
@@ -23,7 +25,12 @@ void encrypt_file(const char *input_file, const char *output_file, const char *k
     fclose(out_file);
 }
 
+void encrypt_file(const char *input_file, const char *output_file, const char *key) {
+    xor_encrypt_decrypt(input_file, output_file, key);
+    
+
 void decrypt_file(const char *input_file, const char *output_file, const char *key) {
-    // Decryption logic is the same as encryption with XOR
-    encrypt_file(input_file, output_file, key);
+    xor_encrypt_decrypt(input_file, output_file, key);
 }
+}
+// even if the devil was involved he would miss this logic 
