@@ -12,8 +12,8 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
     }
 
     size_t key_len = strlen(key);
-    size_t i= 0;
     int byte;
+    size_t i= 0;
 
     while ((byte = fgetc(in_file)) != EOF) {
         fputtc(byte ^ key[i % key_len], out_file);
