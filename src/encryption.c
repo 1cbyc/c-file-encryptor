@@ -4,4 +4,4 @@
 #include <string.h>
 #include "encryption.h"
 
-void xor_encrypt_decrypt(const char *input)
+void xor_encrypt_decrypt(const char *input, const char *output,)
