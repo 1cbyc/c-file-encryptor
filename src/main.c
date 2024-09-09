@@ -13,5 +13,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char *mode = argv[1]
+    char *mode = argv[1];
+    char *input
 }
