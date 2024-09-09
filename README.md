@@ -18,7 +18,10 @@ i am just testing a theory on mac, might even delete this. cause i have not actu
 ```markdown
 oya now, this is my test file. make we see if the encryption and decryption dey work well.
 ```
-6. to those that are oversabinus like me, you can do some debugging sha:
+6. to those that are oversabinus like me, you can do some debugging sha. just add 
 ```c
-
+printf("argc: %d\n", argc);
+for (int i = 0; i < argc; i++) {
+    printf("argv[%d]: %s\n", i, argv[i]);
+}
 ```
