@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
     //     return 1;
     // }
 
-    printf("%s operation completed haha!\n", mode);
-    return 0;
-    return EXIT
+    // printf("%s operation completed haha!\n", mode);
+    // return 0;
+    return EXIT_SUCCESS;
 }
