@@ -12,4 +12,6 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
         printf("Cant open files o.\n");
         exit(1);
     }
+
+    size_t key_len
 }
