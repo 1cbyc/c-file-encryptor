@@ -5,4 +5,4 @@
 void encrypt_file(const char *input_file, const char *output_file, const char *key);
 void decrypt_file(const char *input_file, const char *output_file, const char *key);
 
-#endif 
+#endif
