@@ -30,6 +30,6 @@ void encrypt_file(const char *input_file, const char *output_file, const char *k
     xor_encrypt_decrypt(input_file, output_file, key);
 
 void decrypt_file(const char *input_file, const char *output_file, const char *key) {
-    xor_encrypt_decrypt
+    xor_encrypt_decrypt(input_file, output_file)
 }
 }
