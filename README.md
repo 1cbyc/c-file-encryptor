@@ -18,7 +18,7 @@ i am just testing a theory on mac, might even delete this. cause i have not actu
 ```markdown
 oya now, this is my test file. make we see if the encryption and decryption dey work well.
 ```
-6. to those that are oversabinus like me, you can do some debugging sha. just add print statements to main.c file and then check the value of argc
+6. to those that are oversabinus like me, you can do some debugging sha. just add print statements to main.c file and then check the value of all arguments like the argc, the arg[1] and every other 
 ```c
 printf("argc: %d\n", argc);
 for (int i = 0; i < argc; i++) {
