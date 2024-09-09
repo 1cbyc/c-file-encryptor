@@ -1,1 +1,1 @@
-CC 
+CC = gcc
