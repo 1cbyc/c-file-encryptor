@@ -24,10 +24,10 @@ int main(int argc, char *argv[]) {
     const char *output_file = argv[3];
     const char *key = "secret";  // will be the default key
 
-    char *mode = argv[1];
-    char *input_file = argv[2];
-    char *output_file = argv[3];
-    char *key = argv[4];
+    // char *mode = argv[1];
+    // char *input_file = argv[2];
+    // char *output_file = argv[3];
+    // char *key = argv[4];
 
     if (strcmp(mode, "encrypt") == 0) {
         encrypt_file(input_file, output_file, key);
