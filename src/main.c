@@ -10,7 +10,7 @@ void print_usage() {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc != 4 && argc != 5) { // Adjusted for 4 or 5 arguments
+    if (argc != 4 && argc != 5) { // adjusted for 4 or 5 arguments
         print_usage();
         return EXIT_FAILURE;
     }
