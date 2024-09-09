@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     const char *action = argv[1];
     const char *input_file = argv[2];
     const char *output_file = argv[3];
-    const char *key = "secret";  // 
+    const char *key = "secret";  // will be the default key
 
     char *mode = argv[1];
     char *input_file = argv[2];
