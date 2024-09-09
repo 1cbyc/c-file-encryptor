@@ -53,6 +53,4 @@ dkms.conf
 
 # random
 auto.c
-auto.c
-
 auto_commit
