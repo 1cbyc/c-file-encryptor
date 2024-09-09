@@ -16,5 +16,7 @@ int main(int argc, char *argv[]) {
     char *mode = argv[1];
     char *input_file = argv[2];
     char *output_file = argv[3];
-    char 
+    char *key = argv[4];
+
+    
 }
