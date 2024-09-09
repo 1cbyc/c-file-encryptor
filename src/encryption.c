@@ -24,13 +24,14 @@ void xor_encrypt_decrypt(const char *input, const char *output, const char *key)
     fclose(out_file);
 }
 
-void encrypt_file(const char *input_file, const char *output_file, const char *key) {
-    xor_encrypt_decrypt(input_file, output_file, key);
-}
+// void encrypt_file(const char *input_file, const char *output_file, const char *key) {
+//     xor_encrypt_decrypt(input_file, output_file, key);
+// }
 
-void decrypt_file(const char *input_file, const char *output_file, const char *key) {
-    xor_encrypt_decrypt(input_file, output_file, key);
-}
+// void decrypt_file(const char *input_file, const char *output_file, const char *key) {
+//     xor_encrypt_decrypt(input_file, output_file, key);
+// }
 // even if the devil was involved he would miss this logic 
 void decrypt_file(const char *input_file, const char *output_file, const char *key) {
     encrypt_file(input_file, output_file, key);
+}
