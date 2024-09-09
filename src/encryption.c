@@ -2,4 +2,4 @@
 #ifndef ENCRYPTION_H
 #define ENCRYPTION_H
 
-void encrypt_file(const char *input_file, const char *output)
+void encrypt_file(const char *input_file, const char *output_file, const char *key);
