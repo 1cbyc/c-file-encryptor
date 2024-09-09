@@ -24,6 +24,6 @@ void encrypt_file(const char *input_file, const char *output_file, const char *k
 }
 
 void decrypt_file(const char *input_file, const char *output_file, const char *key) {
-    // Decryption logic is the same as encryption with XOR
+    // the decrypt_file logic is the same as encryption with XOR
     encrypt_file(input_file, output_file, key);
 }
