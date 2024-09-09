@@ -5,5 +5,5 @@
 #include "encryption.h"
 
 void xor_encrypt_decrypt(const char *input, const char *output, const char *key) {
-    
+    FILE *
 }
