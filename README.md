@@ -10,4 +10,7 @@ i am just testing a theory on mac, might even delete this. cause i have not actu
 ```bash
 ./c-file-encryptor encrypt tests/test_input.txt tests/encrypted_output.txt secretkey
 ```
-4. then
+4. then, run for decryption if you like:
+```bash
+./c-file-encryptor decrypt tests/encrypted_output.txt tests/decrypted_output.txt secretkey
+```
