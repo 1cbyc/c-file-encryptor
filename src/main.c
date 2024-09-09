@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     const char *action = argv[1];
     const char *input_file = argv[2];
     const char *output_file = argv[3];
-    const char *key = "secret";  // Default key
+    const char *key = "secret";  // will be the default key
 
     if (strcmp(action, "encrypt") == 0) {
         encrypt_file(input_file, output_file, key);
