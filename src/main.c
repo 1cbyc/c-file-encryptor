@@ -3,8 +3,13 @@
 #include <string.h>
 #include "encryption.h"
 
+// void print_usage() {
+//     printf("Usage: ./c-file-encryptor <encrypt|decrypt> <input_file> <output_file> <key>\n");
+// }
 void print_usage() {
-    printf("Usage: ./c-file-encryptor <encrypt|decrypt> <input_file> <output_file> <key>\n");
+    printf("Usage:\n");
+    printf("  encrypt <input_file> <output_file> <key>\n");
+    printf("  decrypt <input_file> <output_file> <key>\n");
 }
 
 int main(int argc, char *argv[]) {
