@@ -18,6 +18,27 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
         return;
     }
 
+
+    EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
+    if (!ctx) {
+        handle_error("Error creating cipher context");
+        fclose(fin);
+        fclose(fout);
+        return;
+    }
+
+    unsigned char iv[BLOCK_SIZE];
+    if (!RAND_bytes(iv, sizeof(iv))) {
+        handle_error("Error generating IV");
+        fclose(fin);
+        fclose(fout);
+        EVP_CIPHER_CTX_free(ctx);
+        return;
+    }
+
+    fwrite(iv, 1, BLOCK_SIZE, fout); // save the iv
+
+
     AES_KEY aes_key;
     AES_set_encrypt_key(key, 256, &aes_key);
 
