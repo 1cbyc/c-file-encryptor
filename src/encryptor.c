@@ -49,7 +49,19 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
     unsigned char outbuf[BLOCK_SIZE + EVP_MAX_BLOCK_LENGTH];
     int outlen, bytes_read;
 
-    
+    while ((bytes_read = fread(inbuf, 1, BLOCK_SIZE, fin)) > 0) {
+        if (1 != EVP_EncryptUpdate(ctx, outbuf, &outlen, inbuf, bytes_read)) {
+            handle_error("Error during encryption");
+            fclose(fin);
+            fclose(fout);
+            EVP_CIPHER_CTX_free(ctx);
+            return;
+        }
+        fwrite(outbuf, 1, outlen, fout);
+    }
+
+
+
 
 
     AES_KEY aes_key;
