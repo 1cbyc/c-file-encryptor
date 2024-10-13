@@ -37,7 +37,7 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
 
     fwrite(iv, 1, BLOCK_SIZE, fout); // save the iv
 
-        if (1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv)) {
+    if (1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv)) {
         handle_error("Error initializing encryption");
         fclose(fin);
         fclose(fout);
