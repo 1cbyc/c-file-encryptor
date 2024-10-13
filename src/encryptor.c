@@ -71,32 +71,32 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
     log_action("File encrypted successfully.");
 }
 
-    AES_KEY aes_key;
-    AES_set_encrypt_key(key, 256, &aes_key);
+//     AES_KEY aes_key;
+//     AES_set_encrypt_key(key, 256, &aes_key);
 
-    unsigned char inbuf[BLOCK_SIZE];
-    unsigned char outbuf[BLOCK_SIZE];
-    unsigned char iv[BLOCK_SIZE];
+//     unsigned char inbuf[BLOCK_SIZE];
+//     unsigned char outbuf[BLOCK_SIZE];
+//     unsigned char iv[BLOCK_SIZE];
 
-    if (!RAND_bytes(iv, sizeof(iv))) {
-        handle_error("Error generating IV");
-        fclose(fin);
-        fclose(fout);
-        return;
-    }
+//     if (!RAND_bytes(iv, sizeof(iv))) {
+//         handle_error("Error generating IV");
+//         fclose(fin);
+//         fclose(fout);
+//         return;
+//     }
 
-    fwrite(iv, 1, BLOCK_SIZE, fout); // save the iv
+//     fwrite(iv, 1, BLOCK_SIZE, fout); // save the iv
 
-    int bytes_read;
-    while ((bytes_read = fread(inbuf, 1, BLOCK_SIZE, fin)) > 0) {
-        AES_encrypt(inbuf, outbuf, &aes_key);
-        fwrite(outbuf, 1, BLOCK_SIZE, fout);
-    }
+//     int bytes_read;
+//     while ((bytes_read = fread(inbuf, 1, BLOCK_SIZE, fin)) > 0) {
+//         AES_encrypt(inbuf, outbuf, &aes_key);
+//         fwrite(outbuf, 1, BLOCK_SIZE, fout);
+//     }
 
-    fclose(fin);
-    fclose(fout);
-    log_action("File encrypted successfully.");
-}
+//     fclose(fin);
+//     fclose(fout);
+//     log_action("File encrypted successfully.");
+// }
 
 void decrypt_file(const char *input_file, const char *output_file, const unsigned char *key) {
     FILE *fin = fopen(input_file, "rb");
