@@ -137,6 +137,14 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
 
     // int bytes_read;
     while ((bytes_read = fread(inbuf, 1, BLOCK_SIZE, fin)) > 0) {
+         if (1 != EVP_DecryptUpdate(ctx, outbuf, &outlen, inbuf, bytes_read)) {
+            handle_error("Error during decryption");
+            fclose(fin);
+            fclose(fout);
+            EVP_CIPHER_CTX_free(ctx);
+            return;
+        }
+        fwrite(outbuf, 1, outlen, fout);
         AES_decrypt(inbuf, outbuf, &aes_key);
         fwrite(outbuf, 1, BLOCK_SIZE, fout);
     }
