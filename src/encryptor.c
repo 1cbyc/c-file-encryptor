@@ -133,9 +133,9 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
     unsigned char iv[BLOCK_SIZE];
     int outlen, bytes_read;
 
-    fread(iv, 1, BLOCK_SIZE, fin); // read the iv
+    // fread(iv, 1, BLOCK_SIZE, fin); // read the iv
 
-    int bytes_read;
+    // int bytes_read;
     while ((bytes_read = fread(inbuf, 1, BLOCK_SIZE, fin)) > 0) {
         AES_decrypt(inbuf, outbuf, &aes_key);
         fwrite(outbuf, 1, BLOCK_SIZE, fout);
