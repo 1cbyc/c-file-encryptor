@@ -18,7 +18,6 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
         return;
     }
 
-
     EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
     if (!ctx) {
         handle_error("Error creating cipher context");
