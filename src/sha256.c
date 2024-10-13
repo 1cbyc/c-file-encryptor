@@ -25,7 +25,6 @@ void sha256_hash_file(const char *filename, unsigned char *hash) {
 
     // SHA256_CTX sha256;
     // SHA256_Init(&sha256);
-    
     unsigned char buffer[1024];
     int bytes_read;
     while ((bytes_read = fread(buffer, 1, sizeof(buffer), file)) > 0) {
