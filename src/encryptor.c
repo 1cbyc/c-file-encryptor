@@ -49,6 +49,8 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
     unsigned char outbuf[BLOCK_SIZE + EVP_MAX_BLOCK_LENGTH];
     int outlen, bytes_read;
 
+    
+
 
     AES_KEY aes_key;
     AES_set_encrypt_key(key, 256, &aes_key);
