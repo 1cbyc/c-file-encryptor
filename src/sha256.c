@@ -9,6 +9,21 @@ void sha256_hash_file(const char *filename, unsigned char *hash) {
         return;
     }
 
+    EVP_MD_CTX *mdctx = EVP_MD_CTX_new();
+    if (mdctx == NULL) {
+        perror("Error creating digest context");
+        fclose(file);
+        return;
+    }
+
+    if (1 != EVP_DigestInit_ex(mdctx, EVP_sha256(), NULL)) {
+        perror("Error initializing digest");
+        EVP_MD_CTX_free(mdctx);
+        fclose(file);
+        return;
+    }
+
+
     SHA256_CTX sha256;
     SHA256_Init(&sha256);
 
