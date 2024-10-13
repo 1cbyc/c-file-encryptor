@@ -60,6 +60,17 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
         fwrite(outbuf, 1, outlen, fout);
     }
 
+    if (1 != EVP_EncryptFinal_ex(ctx, outbuf, &outlen)) {
+        handle_error("Error finalizing encryption");
+    }
+    fwrite(outbuf, 1, outlen, fout);
+
+    fclose(fin);
+    fclose(fout);
+    EVP_CIPHER_CTX_free(ctx);
+    log_action("File encrypted successfully.");
+}
+
 
 
 
