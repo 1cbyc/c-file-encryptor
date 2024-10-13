@@ -149,6 +149,11 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
         // fwrite(outbuf, 1, BLOCK_SIZE, fout);
     }
 
+    if (1 != EVP_DecryptFinal_ex(ctx, outbuf, &outlen)) {
+        handle_error("Error finalizing decryption");
+    }
+    fwrite(outbuf, 1, outlen, fout);
+
     fclose(fin);
     fclose(fout);
     log_action("File decrypted successfully.");
