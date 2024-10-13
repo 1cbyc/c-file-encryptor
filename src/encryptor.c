@@ -145,8 +145,8 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
             return;
         }
         fwrite(outbuf, 1, outlen, fout);
-        AES_decrypt(inbuf, outbuf, &aes_key);
-        fwrite(outbuf, 1, BLOCK_SIZE, fout);
+        // AES_decrypt(inbuf, outbuf, &aes_key);
+        // fwrite(outbuf, 1, BLOCK_SIZE, fout);
     }
 
     fclose(fin);
