@@ -131,6 +131,7 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
     unsigned char inbuf[BLOCK_SIZE];
     unsigned char outbuf[BLOCK_SIZE];
     unsigned char iv[BLOCK_SIZE];
+    int outlen, bytes_read;
 
     fread(iv, 1, BLOCK_SIZE, fin); // read the iv
 
