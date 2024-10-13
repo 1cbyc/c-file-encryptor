@@ -106,6 +106,17 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
         return;
     }
 
+    unsigned char iv[BLOCK_SIZE];
+    fread(iv, 1, BLOCK_SIZE, fin); // read the iv
+
+    EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
+    if (!ctx) {
+        handle_error("Error creating cipher context");
+        fclose(fin);
+        fclose(fout);
+        return;
+    }
+
     AES_KEY aes_key;
     AES_set_decrypt_key(key, 256, &aes_key);
 
