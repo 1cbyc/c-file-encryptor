@@ -117,8 +117,16 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
         return;
     }
 
-    AES_KEY aes_key;
-    AES_set_decrypt_key(key, 256, &aes_key);
+    if (1 != EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv)) {
+        handle_error("Error initializing decryption");
+        fclose(fin);
+        fclose(fout);
+        EVP_CIPHER_CTX_free(ctx);
+        return;
+    }
+
+    // AES_KEY aes_key;
+    // AES_set_decrypt_key(key, 256, &aes_key);
 
     unsigned char inbuf[BLOCK_SIZE];
     unsigned char outbuf[BLOCK_SIZE];
