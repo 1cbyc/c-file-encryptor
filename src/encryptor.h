@@ -10,7 +10,8 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
 void decrypt_file(const char *input_file, const char *output_file, const unsigned char *key);
 void generate_key_from_password(const char *password, unsigned char *key);
 void sha256_hash_file(const char *filename, unsigned char *hash);
-void progress_feedback(long processed, long total);
 int verify_integrity(const char *input_file, const unsigned char *original_hash);
+void log_action(const char *message);
+void handle_error(const char *error_message);
 
 #endif
