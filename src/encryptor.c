@@ -70,7 +70,6 @@ void encrypt_file(const char *input_file, const char *output_file, const unsigne
     EVP_CIPHER_CTX_free(ctx);
     log_action("File encrypted successfully.");
 }
-
 //     AES_KEY aes_key;
 //     AES_set_encrypt_key(key, 256, &aes_key);
 
