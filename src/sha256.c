@@ -39,7 +39,6 @@ void sha256_hash_file(const char *filename, unsigned char *hash) {
         // SHA256_Update(&sha256, buffer, bytes_read);
     }
 
-
     unsigned int hash_len;
     if (1 != EVP_DigestFinal_ex(mdctx, hash, &hash_len)) {
         perror("Error finalizing digest");
@@ -47,7 +46,6 @@ void sha256_hash_file(const char *filename, unsigned char *hash) {
 
     EVP_MD_CTX_free(mdctx);
     fclose(file);
-
-    SHA256_Final(hash, &sha256);
-    fclose(file);
+    // SHA256_Final(hash, &sha256);
+    // fclose(file);
 }
