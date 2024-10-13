@@ -156,6 +156,7 @@ void decrypt_file(const char *input_file, const char *output_file, const unsigne
 
     fclose(fin);
     fclose(fout);
+    EVP_CIPHER_CTX_free(ctx);
     log_action("File decrypted successfully.");
 }
 
