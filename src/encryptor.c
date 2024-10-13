@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <openssl/evp.h>
+#include <openssl/rand.h>
 #include "encryptor.h"
 #include "sha256.h"
 
